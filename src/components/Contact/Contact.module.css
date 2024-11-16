@@ -1,0 +1,25 @@
+.box {
+    display: flex;
+    margin-top: 20px;
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 10px;
+    align-items: center;
+    justify-content: space-between;
+    width: 270px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.text {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
