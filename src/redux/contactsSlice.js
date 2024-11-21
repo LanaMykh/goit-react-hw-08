@@ -7,21 +7,15 @@ const contactsSlice = createSlice({
     extraReducers: builder => {
     builder
       .addCase(getContacts.pending, (state) => {
-        console.log("p");
-        
         state.loading = true;
         state.error = null;
       })
       .addCase(getContacts.fulfilled, (state, action) => {
-        console.log("f");
-        
         state.loading = false;
         state.error = null;
         state.items = action.payload;
       })
       .addCase(getContacts.rejected, (state, action) => {
-        console.log("e");
-        
         state.loading = false;
         state.error = action.payload;
       })
