@@ -29,7 +29,15 @@ const RegistrationForm = () => {
   function handleSubmit(values, actions) {
     console.log(values);
 
-    dispatch(register(values));
+    dispatch(register(values))
+      .unwrap()
+      .then(() => {
+        console.log('Реєстрація успішна!');
+      })
+      .catch(error => {
+        console.error('Помилка реєстрації:', error); // Обробка помилки на рівні компонента
+      });
+
     actions.resetForm();
   }
 

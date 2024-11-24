@@ -16,14 +16,12 @@ export const register = createAsyncThunk(
   async (formData, thunkAPI) => {
         
     try {
-      console.log(formData);
       const response = await axios.post('/users/signup', formData);
-      console.log(response);
-      
       setToken(response.data.token);
 
       return response.data;
     } catch (error) {
+      
       return thunkAPI.rejectWithValue(error.message);
     }
   }
