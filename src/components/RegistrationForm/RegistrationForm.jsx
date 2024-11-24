@@ -27,8 +27,6 @@ const RegistrationForm = () => {
   const dispatch = useDispatch();
 
   function handleSubmit(values, actions) {
-    console.log(values);
-
     dispatch(register(values))
       .unwrap()
       .then(() => {
@@ -49,22 +47,30 @@ const RegistrationForm = () => {
         validationSchema={RegistrationFormSchema}
       >
         <Form className={styles.form}>
-          <label className={styles.input}>
+          <label className={styles.label}>
             <span>Name:</span>
             <Field type="text" name="name" />
-            <ErrorMessage name="name" component="span" />
+            <ErrorMessage name="name" component="span" className={styles.err} />
           </label>
 
-          <label className={styles.input}>
+          <label className={styles.label}>
             <span>Email:</span>
             <Field type="text" name="email" />
-            <ErrorMessage name="email" component="span" />
+            <ErrorMessage
+              name="email"
+              component="span"
+              className={styles.err}
+            />
           </label>
 
-          <label className={styles.input}>
+          <label className={styles.label}>
             <span>Password:</span>
             <Field type="password" name="password" />
-            <ErrorMessage name="password" component="span" />
+            <ErrorMessage
+              name="password"
+              component="span"
+              className={styles.err}
+            />
           </label>
 
           <button className={styles.btn} type="submit">

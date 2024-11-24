@@ -1,5 +1,5 @@
+import styles from './LoginForm.module.css';
 import { ErrorMessage, Field, Form, Formik } from 'formik';
-import styles from '../LoginForm/LoginForm.module.css';
 import { useDispatch } from 'react-redux';
 import * as Yup from 'yup';
 import { login } from '../../redux/auth/operations';
@@ -34,16 +34,24 @@ export default function LoginForm() {
         validationSchema={LoginFormSchema}
       >
         <Form className={styles.form}>
-          <label className={styles.input}>
+          <label className={styles.label}>
             <span>Email:</span>
             <Field type="text" name="email" />
-            <ErrorMessage name="email" component="span" />
+            <ErrorMessage
+              name="email"
+              component="span"
+              className={styles.err}
+            />
           </label>
 
-          <label className={styles.input}>
+          <label className={styles.label}>
             <span>Password:</span>
             <Field type="password" name="password" />
-            <ErrorMessage name="password" component="span" />
+            <ErrorMessage
+              name="password"
+              component="span"
+              className={styles.err}
+            />
           </label>
 
           <button className={styles.btn} type="submit">

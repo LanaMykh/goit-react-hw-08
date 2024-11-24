@@ -42,7 +42,6 @@ const App = () => {
       <div>
         <Layout>
           <Routes>
-            {/* <h1>Phonebook</h1> */}
             <Route path="/" element={<HomePage />} />
             <Route
               path="/register"
@@ -71,11 +70,6 @@ const App = () => {
                 />
               }
             />
-            {/* <ContactForm />
-          <SearchBox />
-          {error && <ErrorMessage />}
-          <ContactList />
-          {loading && <Loader />} */}
           </Routes>
         </Layout>
       </div>
