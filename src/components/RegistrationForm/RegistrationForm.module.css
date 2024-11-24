@@ -1,0 +1,45 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    width: 300px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid black;
+}
+
+.label {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.btn {
+    padding: 4px 10px 2px;
+}
+
+.err {
+    color: red;
+}
+
+/* .form {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 8px;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.btn {
+    padding: 2px;
+} */
