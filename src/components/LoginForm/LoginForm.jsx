@@ -3,6 +3,7 @@ import { ErrorMessage, Field, Form, Formik } from 'formik';
 import { useDispatch } from 'react-redux';
 import * as Yup from 'yup';
 import { login } from '../../redux/auth/operations';
+import toast from 'react-hot-toast';
 
 const initialValues = {
   email: '',
@@ -22,7 +23,14 @@ export default function LoginForm() {
   const dispatch = useDispatch();
 
   function handleSubmit(values, actions) {
-    dispatch(login(values));
+    dispatch(login(values))
+      .unwrap()
+      .then(() => {
+        // toast.success('Registration successful!');
+      })
+      .catch(() => {
+        toast.error('Please check your registration data.');
+      });
     actions.resetForm();
   }
 

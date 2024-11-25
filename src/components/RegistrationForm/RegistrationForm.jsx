@@ -3,6 +3,7 @@ import { ErrorMessage, Field, Form, Formik } from 'formik';
 import { useDispatch } from 'react-redux';
 import * as Yup from 'yup';
 import { register } from '../../redux/auth/operations';
+import toast from 'react-hot-toast';
 
 const initialValues = {
   name: '',
@@ -30,10 +31,10 @@ const RegistrationForm = () => {
     dispatch(register(values))
       .unwrap()
       .then(() => {
-        console.log('Реєстрація успішна!');
+        // toast.success('Registration successful!');
       })
-      .catch(error => {
-        console.error('Помилка реєстрації:', error); // Обробка помилки на рівні компонента
+      .catch(() => {
+        toast.error('Please check your registration data.');
       });
 
     actions.resetForm();

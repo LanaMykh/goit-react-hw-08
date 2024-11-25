@@ -1,11 +1,7 @@
 import styles from './ErrorMessage.module.css';
 
-const ErrorMessage = () => {
-  return (
-    <p className={styles.err}>
-      Oops, some error occured. Please, try again later.
-    </p>
-  );
+const ErrorMsg = () => {
+  return <p className={styles.err}>Помилка реєстрації</p>;
 };
 
-export default ErrorMessage;
+export default ErrorMsg;

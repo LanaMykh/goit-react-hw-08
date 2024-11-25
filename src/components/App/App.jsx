@@ -15,19 +15,9 @@ import LoginPage from '../../pages/LoginPage/LoginPage';
 import HomePage from '../../pages/HomePage/HomePage';
 import ContactsPage from '../../pages/ContactsPage/ContactsPage';
 
-// import ContactForm from '../ContactForm/ContactForm';
-// import SearchBox from '../SearchBox/SearchBox';
-// import ContactList from '../ContactList/ContactList';
-// import { selectError, selectLoading } from '../../redux/selectors';
-// import Loader from '../Loader/Loader';
-// import ErrorMessage from '../ErrorMessage/ErrorMessage';
-// import { fetchContacts } from '../../redux/contactsOps';
-
 const App = () => {
   const dispatch = useDispatch();
   const isRefreshing = useSelector(selectUserIsRefreshing);
-  // const loading = useSelector(selectLoading);
-  // const error = useSelector(selectError);
 
   useEffect(() => {
     dispatch(refreshUser());
