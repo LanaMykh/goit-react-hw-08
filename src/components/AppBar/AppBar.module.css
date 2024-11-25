@@ -1,11 +1,17 @@
-.header {
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 16px;
+    gap: 20px;
 }
 
 body {
     margin-top: 10px;
     margin-left: 10px;
+}
+
+a {
+    margin-right: 20px;
+    /* Adjust the spacing between links */
 }
